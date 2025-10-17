@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hippodrome de Pau – Votre avis compte 🐎</title>
+
+  <style>
+    /* === POLICE ET COULEURS === */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(160deg, #e7f2e7 0%, #fefaf3 50%, #fff6df 100%);
+      color: #3D3B2F;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* === ANIMATIONS === */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* === EN-TÊTE === */
+    header {
+      text-align: center;
+      margin-top: 40px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    header h1 {
+      color: #2b6e2b;
+      font-weight: 700;
+      font-size: 1.8em;
+      margin-bottom: 0.2em;
+    }
+    header p {
+      font-size: 1em;
+      color: #4B3B2A;
+    }
+
+    /* === CONTENEUR DU FORMULAIRE === */
+    .form-container {
+      position: relative;
+      width: 95%;
+      max-width: 850px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      margin: 40px 0;
+      padding: 25px 20px;
+      animation: fadeIn 1.8s ease-in-out;
+    }
+
+    /* === LOGO CHEVAUCHANT === */
+    .logo {
+      position: absolute;
+      top: -50px;
+      right: -40px;
+      width: 160px;
+      z-index: 2;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+      border-radius: 16px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    /* === ANIMATION DE SURVOL LUMINEUSE === */
+    .form-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -50%;
+      width: 200%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+      transform: translateX(-100%);
+      animation: shimmer 6s infinite;
+    }
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* === PIED DE PAGE === */
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #7a6e5c;
+      margin: 20px 0 40px;
+      animation: fadeIn 2.2s ease-in-out;
+    }
+
+    @media (max-width: 700px) {
+      header h1 { font-size: 1.4em; }
+      iframe { height: 80vh; }
+      .logo {
+        width: 110px;
+        top: -40px;
+        right: -20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Votre avis compte 🐎</h1>
+    <p>Participez à l’expérience Hippodrome de Pau</p>
+  </header>
+
+  <div class="form-container">
+    <!-- 🏇 LOGO (placer ton image ici) -->
+    <img src="https://www.event-pau.com/content/uploads/2024/05/hippodrome_pau.png" 
+         alt="Logo Hippodrome de Pau" class="logo">
+
+    <!-- 🧾 IFRAME DU FORMULAIRE -->
+    <iframe
+      src="https://tally.so/r/mYLxyB"
+      title="Formulaire Hippodrome Pau"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <footer>
+    © 2025 Hippodrome de Pau – Merci de votre participation 🌿
+  </footer>
+</body>
+</html>
